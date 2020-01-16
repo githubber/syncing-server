@@ -42,5 +42,5 @@ group :development, :test do
 end
 
 group :docker_development do
-  gem 'sqlite3'
+  gem 'pg'
 end
