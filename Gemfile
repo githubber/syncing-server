@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '5.1.7'
+gem 'mysql2', '>= 0.3.13', '< 0.5'
 gem 'whenever', :require => false
 gem 'shoryuken'
 gem 'secure_headers'
@@ -41,5 +42,5 @@ group :production, :test do
 end
 
 group :docker_production do
-  gem 'mysql2', '>= 0.3.13', '< 0.5'
+  gem 'sqlite3'
 end
