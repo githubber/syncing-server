@@ -41,7 +41,7 @@ production:
   <<: *default
 
 docker_development:
-  adapter: mysql12
+  adapter: mysql2
   pool: 5
   timeout: 5000
-  database: 
+  database: db/schema.rb
