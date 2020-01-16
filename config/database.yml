@@ -20,7 +20,7 @@ default: &default
   port: <%= ENV['DB_PORT'] %>
   reconnect: true
 
-development:
+production:
   <<: *default
 
 # Warning: The database defined as "test" will be erased and
@@ -41,7 +41,7 @@ production:
   <<: *default
 
 docker_development:
-  adapter: sqlite3
+  adapter: mysql12
   pool: 5
   timeout: 5000
-  database: db/docker.sqlite3
+  database: 
