@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '5.1.7'
-gem 'mysql2', '>= 0.3.13', '< 0.5'
 gem 'whenever', :require => false
 gem 'shoryuken'
 gem 'secure_headers'
@@ -27,7 +26,6 @@ group :production, :test, :docker_production do
 
   # Used by Mailatcher
   gem 'sinatra', github: 'sinatra'
-  gem 'mailcatcher'
 end
 
 group :production, :test do
@@ -42,5 +40,5 @@ group :production, :test do
 end
 
 group :docker_production do
-  gem 'sqlite3'
+  gem 'mysql2', '>= 0.3.13', '< 0.5'
 end
