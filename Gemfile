@@ -17,7 +17,7 @@ gem 'rotp'
 # Used for 'respond_to' feature
 gem 'responders', '~> 2.0'
 
-group :development, :test, :docker_development do
+group :production, :test, :docker_production do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'spring'
@@ -30,7 +30,7 @@ group :development, :test, :docker_development do
   gem 'mailcatcher'
 end
 
-group :development, :test do
+group :production, :test do
   # Deployment tools
   gem 'capistrano'
   gem 'capistrano-bundler'
@@ -41,6 +41,6 @@ group :development, :test do
   gem 'capistrano-shoryuken', github: 'mobitar/capistrano-shoryuken'
 end
 
-group :docker_development do
-  gem 'pg'
+group :docker_production do
+  gem 'mysql2'
 end
